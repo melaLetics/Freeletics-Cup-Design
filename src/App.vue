@@ -11,14 +11,14 @@
       </div>
       <div class="singleline">
         <div class="slogan">
-          BETTER THAN YESTERDAY
+          Challenge accepted
         </div>
       </div>  
       <div class="logo">
         <img src="@/assets/images/Freeletics.png" width="350px"/>
       </div>
       <div class="username">
-        MELA LETICS
+        BOOTCAMP 2023 - JAY LETICS
       </div>
     </div>
     <button @click="downloadImage">
