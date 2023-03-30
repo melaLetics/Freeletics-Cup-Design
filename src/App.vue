@@ -8,10 +8,6 @@
       <div class="singleline">
         <div class="slogan">Challenge accepted</div>
       </div>
-        <div class="slogan">
-          Challenge accepted
-        </div>
-      </div>  
       <div class="logo">
         <img
           src="@/assets/images/cat1.jpg"
