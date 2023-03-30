@@ -21,10 +21,15 @@
         MELA LETICS
       </div>
     </div>
+    <button @click="downloadImage">
+       Download as image 
+    </button>
   </div>
 </template>
 
 <script>
+
+import domtoimage from "dom-to-image-more";
 
 export default {
   name: 'App',
@@ -38,6 +43,18 @@ export default {
   computed: {
   },
   methods: {
+    downloadImage(){
+      domtoimage
+      .toPng(document.getElementById("capture"))
+      .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        document.body.appendChild(img);
+      })
+      .catch(function (error) {
+        console.error("oops, something went wrong!", error);
+      });
+    }
   }
 };
 </script>
