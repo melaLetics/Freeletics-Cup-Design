@@ -10,8 +10,13 @@
       </div>
       <div class="logo">
         <img
+          src="@/assets/images/lifting.png"
+          width="240px"
+          style="margin-bottom: -22px; margin-left: -20px"
+        />
+        <img
           src="@/assets/images/cat1.jpg"
-          width="120px"
+          width="100px"
           style="margin-right: -10px"
         />
         <img
@@ -21,9 +26,10 @@
         />
         <img
           src="@/assets/images/cat2.jpg"
-          width="120px"
+          width="90px"
           style="margin-left: -20px"
         />
+        <img src="@/assets/images/running.png" width="180px" />
       </div>
       <div class="username">BOOTCAMP 2023 - JAY LETICS</div>
     </div>
@@ -109,6 +115,7 @@ export default {
 }
 
 .username {
+  padding-top: 15px;
   padding-right: 55px;
   text-align: right;
 }
