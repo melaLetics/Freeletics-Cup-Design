@@ -1,114 +1,704 @@
 <template>
   <div>
     <div class="wrapper">
-      <div class="multiline">
-        <div class="slogan-1">
-          THIS COULD BE THE FIRST LINE 
-        </div>
-        <div class="slogan-2">
-                IF THERE ARE TWO LINES IN SLOGAN
-        </div>
-      </div>
-      <div class="singleline">
-        <div class="slogan">
-          BETTER THAN YESTERDAY
-        </div>
-      </div>  
       <div class="logo">
-        <img src="@/assets/images/Freeletics.png" width="350px"/>
-      </div>
-      <div class="username">
-        MELA LETICS
+        <div class="no">NO</div>
+        <div class="excuses">EXCUSES</div>
+        <div class="fill" />
       </div>
     </div>
-    <button @click="downloadImage">
-       Download as image 
-    </button>
+    <button @click="downloadImage">Download as image</button>
   </div>
 </template>
 
 <script>
-
-import domtoimage from "dom-to-image-more";
+import domtoimage from 'dom-to-image-more';
 
 export default {
   name: 'App',
   data() {
-    return {
-    };
+    return {};
   },
-  mounted() {
-
-  },
-  computed: {
-  },
+  mounted() {},
+  computed: {},
   methods: {
-    downloadImage(){
+    downloadImage() {
       domtoimage
-      .toPng(document.getElementById("capture"))
-      .then(function (dataUrl) {
-        var img = new Image();
-        img.src = dataUrl;
-        document.body.appendChild(img);
-      })
-      .catch(function (error) {
-        console.error("oops, something went wrong!", error);
-      });
-    }
-  }
+        .toPng(document.getElementById('capture'))
+        .then(function (dataUrl) {
+          var img = new Image();
+          img.src = dataUrl;
+          document.body.appendChild(img);
+        })
+        .catch(function (error) {
+          console.error('oops, something went wrong!', error);
+        });
+    },
+  },
 };
 </script>
 
 <style>
 @font-face {
-  font-family: "TheSans";
-  src: local("TheSans"), url(./assets/fonts/TheSansBlackPlain.ttf) format("truetype");
+  font-family: 'TheSans';
+  src: local('TheSans'),
+    url(./assets/fonts/TheSansBlackPlain.ttf) format('truetype');
 }
 .wrapper {
-  height: 335px;
+  height: 550px;
   width: 869px;
   padding-left: 30px;
   padding-right: 45px;
   padding-bottom: 20px;
   background-color: black;
   color: white;
-  font-family: "TheSans", Helvetica, Arial;
+  font-family: 'TheSans', Helvetica, Arial;
   font-size: 20px;
 }
 
-/* just choose display: flex to use multiline slogan*/
-.multiline{
-  display: none;
-}
-
-/* choose display: none to use multiline slogan*/
-.singleline{
-  display: flex;
-  text-align: center;
-}
-
-.slogan-1{
-  padding-top: 20px;
-}
-
-.slogan-2 {
-  width: 869px;
-  text-align: right;
-  margin-bottom: 5px;
-}
-
-.slogan {
-  padding-top: 20px;
-  font-size: 30px;
-}
-
-.logo{
+.logo {
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;
 }
-
-.username {
+.no {
+  font-size: 400px;
+  color: black;
+  text-shadow: 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white,
+    -1px -1px 0 white, 0px 1px 0 white, 0px -1px 0 white, -1px 0px 0 white,
+    1px 0px 0 white, 2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white,
+    -2px -2px 0 white, 0px 2px 0 white, 0px -2px 0 white, -2px 0px 0 white,
+    2px 0px 0 white, 1px 2px 0 white, -1px 2px 0 white, 1px -2px 0 white,
+    -1px -2px 0 white, 2px 1px 0 white, -2px 1px 0 white, 2px -1px 0 white,
+    -2px -1px 0 white, 3px 3px 0 white, -3px 3px 0 white, 3px -3px 0 white,
+    -3px -3px 0 white, 0px 3px 0 white, 0px -3px 0 white, -3px 0px 0 white,
+    3px 0px 0 white, 1px 3px 0 white, -1px 3px 0 white, 1px -3px 0 white,
+    -1px -3px 0 white, 3px 1px 0 white, -3px 1px 0 white, 3px -1px 0 white,
+    -3px -1px 0 white, 2px 3px 0 white, -2px 3px 0 white, 2px -3px 0 white,
+    -2px -3px 0 white, 3px 2px 0 white, -3px 2px 0 white, 3px -2px 0 white,
+    -3px -2px 0 white, 4px 4px 0 white, -4px 4px 0 white, 4px -4px 0 white,
+    -4px -4px 0 white, 0px 4px 0 white, 0px -4px 0 white, -4px 0px 0 white,
+    4px 0px 0 white, 1px 4px 0 white, -1px 4px 0 white, 1px -4px 0 white,
+    -1px -4px 0 white, 4px 1px 0 white, -4px 1px 0 white, 4px -1px 0 white,
+    -4px -1px 0 white, 2px 4px 0 white, -2px 4px 0 white, 2px -4px 0 white,
+    -2px -4px 0 white, 4px 2px 0 white, -4px 2px 0 white, 4px -2px 0 white,
+    -4px -2px 0 white, 3px 4px 0 white, -3px 4px 0 white, 3px -4px 0 white,
+    -3px -4px 0 white, 4px 3px 0 white, -4px 3px 0 white, 4px -3px 0 white,
+    -4px -3px 0 white, 5px 5px 0 white, -5px 5px 0 white, 5px -5px 0 white,
+    -5px -5px 0 white, 0px 5px 0 white, 0px -5px 0 white, -5px 0px 0 white,
+    5px 0px 0 white, 1px 5px 0 white, -1px 5px 0 white, 1px -5px 0 white,
+    -1px -5px 0 white, 5px 1px 0 white, -5px 1px 0 white, 5px -1px 0 white,
+    -5px -1px 0 white, 2px 5px 0 white, -2px 5px 0 white, 2px -5px 0 white,
+    -2px -5px 0 white, 5px 2px 0 white, -5px 2px 0 white, 5px -2px 0 white,
+    -5px -2px 0 white, 3px 5px 0 white, -3px 5px 0 white, 3px -5px 0 white,
+    -3px -5px 0 white, 5px 3px 0 white, -5px 3px 0 white, 5px -3px 0 white,
+    -5px -3px 0 white, 4px 5px 0 white, -4px 5px 0 white, 4px -5px 0 white,
+    -4px -5px 0 white, 5px 4px 0 white, -5px 4px 0 white, 5px -4px 0 white,
+    -5px -4px 0 white, 6px 6px 0 white, -6px 6px 0 white, 6px -6px 0 white,
+    -6px -6px 0 white, 0px 6px 0 white, 0px -6px 0 white, -6px 0px 0 white,
+    6px 0px 0 white, 1px 6px 0 white, -1px 6px 0 white, 1px -6px 0 white,
+    -1px -6px 0 white, 6px 1px 0 white, -6px 1px 0 white, 6px -1px 0 white,
+    -6px -1px 0 white, 2px 6px 0 white, -2px 6px 0 white, 2px -6px 0 white,
+    -2px -6px 0 white, 6px 2px 0 white, -6px 2px 0 white, 6px -2px 0 white,
+    -6px -2px 0 white, 3px 6px 0 white, -3px 6px 0 white, 3px -6px 0 white,
+    -3px -6px 0 white, 6px 3px 0 white, -6px 3px 0 white, 6px -3px 0 white,
+    -6px -3px 0 white, 4px 6px 0 white, -4px 6px 0 white, 4px -6px 0 white,
+    -4px -6px 0 white, 6px 4px 0 white, -6px 4px 0 white, 6px -4px 0 white,
+    -6px -4px 0 white, 5px 6px 0 white, -5px 6px 0 white, 5px -6px 0 white,
+    -5px -6px 0 white, 6px 5px 0 white, -6px 5px 0 white, 6px -5px 0 white,
+    -6px -5px 0 white, 7px 7px 0 white, -7px 7px 0 white, 7px -7px 0 white,
+    -7px -7px 0 white, 0px 7px 0 white, 0px -7px 0 white, -7px 0px 0 white,
+    7px 0px 0 white, 1px 7px 0 white, -1px 7px 0 white, 1px -7px 0 white,
+    -1px -7px 0 white, 7px 1px 0 white, -7px 1px 0 white, 7px -1px 0 white,
+    -7px -1px 0 white, 2px 7px 0 white, -2px 7px 0 white, 2px -7px 0 white,
+    -2px -7px 0 white, 7px 2px 0 white, -7px 2px 0 white, 7px -2px 0 white,
+    -7px -2px 0 white, 3px 7px 0 white, -3px 7px 0 white, 3px -7px 0 white,
+    -3px -7px 0 white, 7px 3px 0 white, -7px 3px 0 white, 7px -3px 0 white,
+    -7px -3px 0 white, 4px 7px 0 white, -4px 7px 0 white, 4px -7px 0 white,
+    -4px -7px 0 white, 7px 4px 0 white, -7px 4px 0 white, 7px -4px 0 white,
+    -7px -4px 0 white, 5px 7px 0 white, -5px 7px 0 white, 5px -7px 0 white,
+    -5px -7px 0 white, 7px 5px 0 white, -7px 5px 0 white, 7px -5px 0 white,
+    -7px -5px 0 white, 6px 7px 0 white, -6px 7px 0 white, 6px -7px 0 white,
+    -6px -7px 0 white, 7px 6px 0 white, -7px 6px 0 white, 7px -6px 0 white,
+    -7px -6px 0 white, 8px 8px 0 white, -8px 8px 0 white, 8px -8px 0 white,
+    -8px -8px 0 white, 0px 8px 0 white, 0px -8px 0 white, -8px 0px 0 white,
+    8px 0px 0 white, 1px 8px 0 white, -1px 8px 0 white, 1px -8px 0 white,
+    -1px -8px 0 white, 8px 1px 0 white, -8px 1px 0 white, 8px -1px 0 white,
+    -8px -1px 0 white, 2px 8px 0 white, -2px 8px 0 white, 2px -8px 0 white,
+    -2px -8px 0 white, 8px 2px 0 white, -8px 2px 0 white, 8px -2px 0 white,
+    -8px -2px 0 white, 3px 8px 0 white, -3px 8px 0 white, 3px -8px 0 white,
+    -3px -8px 0 white, 8px 3px 0 white, -8px 3px 0 white, 8px -3px 0 white,
+    -8px -3px 0 white, 4px 8px 0 white, -4px 8px 0 white, 4px -8px 0 white,
+    -4px -8px 0 white, 8px 4px 0 white, -8px 4px 0 white, 8px -4px 0 white,
+    -8px -4px 0 white, 5px 8px 0 white, -5px 8px 0 white, 5px -8px 0 white,
+    -5px -8px 0 white, 8px 5px 0 white, -8px 5px 0 white, 8px -5px 0 white,
+    -8px -5px 0 white, 6px 8px 0 white, -6px 8px 0 white, 6px -8px 0 white,
+    -6px -8px 0 white, 8px 6px 0 white, -8px 6px 0 white, 8px -6px 0 white,
+    -8px -6px 0 white, 7px 8px 0 white, -7px 8px 0 white, 7px -8px 0 white,
+    -7px -8px 0 white, 8px 7px 0 white, -8px 7px 0 white, 8px -7px 0 white,
+    -8px -7px 0 white, 9px 9px 0 white, -9px 9px 0 white, 9px -9px 0 white,
+    -9px -9px 0 white, 0px 9px 0 white, 0px -9px 0 white, -9px 0px 0 white,
+    9px 0px 0 white, 1px 9px 0 white, -1px 9px 0 white, 1px -9px 0 white,
+    -1px -9px 0 white, 9px 1px 0 white, -9px 1px 0 white, 9px -1px 0 white,
+    -9px -1px 0 white, 2px 9px 0 white, -2px 9px 0 white, 2px -9px 0 white,
+    -2px -9px 0 white, 9px 2px 0 white, -9px 2px 0 white, 9px -2px 0 white,
+    -9px -2px 0 white, 3px 9px 0 white, -3px 9px 0 white, 3px -9px 0 white,
+    -3px -9px 0 white, 9px 3px 0 white, -9px 3px 0 white, 9px -3px 0 white,
+    -9px -3px 0 white, 4px 9px 0 white, -4px 9px 0 white, 4px -9px 0 white,
+    -4px -9px 0 white, 9px 4px 0 white, -9px 4px 0 white, 9px -4px 0 white,
+    -9px -4px 0 white, 5px 9px 0 white, -5px 9px 0 white, 5px -9px 0 white,
+    -5px -9px 0 white, 9px 5px 0 white, -9px 5px 0 white, 9px -5px 0 white,
+    -9px -5px 0 white, 6px 9px 0 white, -6px 9px 0 white, 6px -9px 0 white,
+    -6px -9px 0 white, 9px 6px 0 white, -9px 6px 0 white, 9px -6px 0 white,
+    7px 9px 0 white, -7px 9px 0 white, 7px -9px 0 white, -7px -9px 0 white,
+    9px 7px 0 white, -9px 7px 0 white, 9px -7px 0 white, -9px -7px 0 white,
+    -9px -6px 0 white, 8px 9px 0 white, -8px 9px 0 white, 8px -9px 0 white,
+    -8px -9px 0 white, 9px 8px 0 white, -9px 8px 0 white, 9px -8px 0 white,
+    -9px -8px 0 white, 10px 10px 0 white, -10px 10px 0 white, 10px -10px 0 white,
+    -10px -10px 0 white, 0px 10px 0 white, 0px -10px 0 white, -10px 0px 0 white,
+    10px 0px 0 white, 1px 10px 0 white, -1px 10px 0 white, 1px -10px 0 white,
+    -1px -10px 0 white, 10px 1px 0 white, -10px 1px 0 white, 10px -1px 0 white,
+    -10px -1px 0 white, 2px 10px 0 white, -2px 10px 0 white, 2px -10px 0 white,
+    -2px -10px 0 white, 10px 2px 0 white, -10px 2px 0 white, 10px -2px 0 white,
+    -10px -2px 0 white, 3px 10px 0 white, -3px 10px 0 white, 3px -10px 0 white,
+    -3px -10px 0 white, 10px 3px 0 white, -10px 3px 0 white, 10px -3px 0 white,
+    -10px -3px 0 white, 4px 10px 0 white, -4px 10px 0 white, 4px -10px 0 white,
+    -4px -10px 0 white, 10px 4px 0 white, -10px 4px 0 white, 10px -4px 0 white,
+    -10px -4px 0 white, 5px 10px 0 white, -5px 10px 0 white, 5px -10px 0 white,
+    -5px -10px 0 white, 10px 5px 0 white, -10px 5px 0 white, 10px -5px 0 white,
+    -10px -5px 0 white, 6px 10px 0 white, -6px 10px 0 white, 6px -10px 0 white,
+    -6px -10px 0 white, 10px 6px 0 white, -10px 6px 0 white, 10px -6px 0 white,
+    -10px -6px 0 white, 7px 10px 0 white, -7px 10px 0 white, 7px -10px 0 white,
+    -7px -10px 0 white, 10px 7px 0 white, -10px 7px 0 white, 10px -7px 0 white,
+    -10px -7px 0 white, 8px 10px 0 white, -8px 10px 0 white, 8px -10px 0 white,
+    -8px -10px 0 white, 10px 8px 0 white, -10px 8px 0 white, 10px -8px 0 white,
+    -10px -8px 0 white, 9px 10px 0 white, -9px 10px 0 white, 9px -10px 0 white,
+    -9px -10px 0 white, 10px 9px 0 white, -10px 9px 0 white, 10px -9px 0 white,
+    -10px -9px 0 white, 11px 11px 0 white, -11px 11px 0 white,
+    11px -11px 0 white, -11px -11px 0 white, 0px 11px 0 white, 0px -11px 0 white,
+    -11px 0px 0 white, 11px 0px 0 white, 1px 11px 0 white, -1px 11px 0 white,
+    1px -11px 0 white, -1px -11px 0 white, 11px 1px 0 white, -11px 1px 0 white,
+    11px -1px 0 white, -11px -1px 0 white, 2px 11px 0 white, -2px 11px 0 white,
+    2px -11px 0 white, -2px -11px 0 white, 11px 2px 0 white, -11px 2px 0 white,
+    11px -2px 0 white, -11px -2px 0 white, 3px 11px 0 white, -3px 11px 0 white,
+    3px -11px 0 white, -3px -11px 0 white, 11px 3px 0 white, -11px 3px 0 white,
+    11px -3px 0 white, -11px -3px 0 white, 4px 11px 0 white, -4px 11px 0 white,
+    4px -11px 0 white, -4px -11px 0 white, 11px 4px 0 white, -11px 4px 0 white,
+    11px -4px 0 white, -11px -4px 0 white, 5px 11px 0 white, -5px 11px 0 white,
+    5px -11px 0 white, -5px -11px 0 white, 11px 5px 0 white, -11px 5px 0 white,
+    11px -5px 0 white, -11px -5px 0 white, 6px 11px 0 white, -6px 11px 0 white,
+    6px -11px 0 white, -6px -11px 0 white, 11px 6px 0 white, -11px 6px 0 white,
+    11px -6px 0 white, -11px -6px 0 white, 7px 11px 0 white, -7px 11px 0 white,
+    7px -11px 0 white, -7px -11px 0 white, 11px 7px 0 white, -11px 7px 0 white,
+    11px -7px 0 white, -11px -7px 0 white, 8px 11px 0 white, -8px 11px 0 white,
+    8px -11px 0 white, -8px -11px 0 white, 11px 8px 0 white, -11px 8px 0 white,
+    11px -8px 0 white, -11px -8px 0 white, 9px 11px 0 white, -9px 11px 0 white,
+    9px -11px 0 white, -9px -11px 0 white, 11px 9px 0 white, -11px 9px 0 white,
+    11px -9px 0 white, -11px -9px 0 white, 10px 11px 0 white, -10px 11px 0 white,
+    10px -11px 0 white, -10px -11px 0 white, 11px 10px 0 white,
+    -11px 10px 0 white, 11px -10px 0 white, -11px -10px 0 white,
+    12px 12px 0 white, -12px 12px 0 white, 12px -12px 0 white,
+    -12px -12px 0 white, 0px 12px 0 white, 0px -12px 0 white, -12px 0px 0 white,
+    12px 0px 0 white, 1px 12px 0 white, -1px 12px 0 white, 1px -12px 0 white,
+    -1px -12px 0 white, 12px 1px 0 white, -12px 1px 0 white, 12px -1px 0 white,
+    -12px -1px 0 white, 2px 12px 0 white, -2px 12px 0 white, 2px -12px 0 white,
+    -2px -12px 0 white, 12px 2px 0 white, -12px 2px 0 white, 12px -2px 0 white,
+    -12px -2px 0 white, 3px 12px 0 white, -3px 12px 0 white, 3px -12px 0 white,
+    -3px -12px 0 white, 12px 3px 0 white, -12px 3px 0 white, 12px -3px 0 white,
+    -12px -3px 0 white, 4px 12px 0 white, -4px 12px 0 white, 4px -12px 0 white,
+    -4px -12px 0 white, 12px 4px 0 white, -12px 4px 0 white, 12px -4px 0 white,
+    -12px -4px 0 white, 5px 12px 0 white, -5px 12px 0 white, 5px -12px 0 white,
+    -5px -12px 0 white, 12px 5px 0 white, -12px 5px 0 white, 12px -5px 0 white,
+    -12px -5px 0 white, 6px 12px 0 white, -6px 12px 0 white, 6px -12px 0 white,
+    -6px -12px 0 white, 12px 6px 0 white, -12px 6px 0 white, 12px -6px 0 white,
+    -12px -6px 0 white, 7px 12px 0 white, -7px 12px 0 white, 7px -12px 0 white,
+    -7px -12px 0 white, 12px 7px 0 white, -12px 7px 0 white, 12px -7px 0 white,
+    -12px -7px 0 white, 8px 12px 0 white, -8px 12px 0 white, 8px -12px 0 white,
+    -8px -12px 0 white, 12px 8px 0 white, -12px 8px 0 white, 12px -8px 0 white,
+    -12px -8px 0 white, 9px 12px 0 white, -9px 12px 0 white, 9px -12px 0 white,
+    -9px -12px 0 white, 12px 9px 0 white, -12px 9px 0 white, 12px -9px 0 white,
+    -12px -9px 0 white, 10px 12px 0 white, -10px 12px 0 white,
+    10px -12px 0 white, -10px -12px 0 white, 12px 10px 0 white,
+    -12px 10px 0 white, 12px -10px 0 white, -12px -10px 0 white,
+    11px 12px 0 white, -11px 12px 0 white, 11px -12px 0 white,
+    -11px -12px 0 white, 12px 11px 0 white, -12px 11px 0 white,
+    12px -11px 0 white, -12px -11px 0 white, 13px 13px 0 white,
+    -13px 13px 0 white, 13px -13px 0 white, -13px -13px 0 white,
+    0px 13px 0 white, 0px -13px 0 white, -13px 0px 0 white, 13px 0px 0 white,
+    1px 13px 0 white, -1px 13px 0 white, 1px -13px 0 white, -1px -13px 0 white,
+    13px 1px 0 white, -13px 1px 0 white, 13px -1px 0 white, -13px -1px 0 white,
+    2px 13px 0 white, -2px 13px 0 white, 2px -13px 0 white, -2px -13px 0 white,
+    13px 2px 0 white, -13px 2px 0 white, 13px -2px 0 white, -13px -2px 0 white,
+    3px 13px 0 white, -3px 13px 0 white, 3px -13px 0 white, -3px -13px 0 white,
+    13px 3px 0 white, -13px 3px 0 white, 13px -3px 0 white, -13px -3px 0 white,
+    4px 13px 0 white, -4px 13px 0 white, 4px -13px 0 white, -4px -13px 0 white,
+    13px 4px 0 white, -13px 4px 0 white, 13px -4px 0 white, -13px -4px 0 white,
+    5px 13px 0 white, -5px 13px 0 white, 5px -13px 0 white, -5px -13px 0 white,
+    13px 5px 0 white, -13px 5px 0 white, 13px -5px 0 white, -13px -5px 0 white,
+    6px 13px 0 white, -6px 13px 0 white, 6px -13px 0 white, -6px -13px 0 white,
+    13px 6px 0 white, -13px 6px 0 white, 13px -6px 0 white, -13px -6px 0 white,
+    7px 13px 0 white, -7px 13px 0 white, 7px -13px 0 white, -7px -13px 0 white,
+    13px 7px 0 white, -13px 7px 0 white, 13px -7px 0 white, -13px -7px 0 white,
+    8px 13px 0 white, -8px 13px 0 white, 8px -13px 0 white, -8px -13px 0 white,
+    13px 8px 0 white, -13px 8px 0 white, 13px -8px 0 white, -13px -8px 0 white,
+    9px 13px 0 white, -9px 13px 0 white, 9px -13px 0 white, -9px -13px 0 white,
+    13px 9px 0 white, -13px 9px 0 white, 1px -9px 0 white, -13px -9px 0 white,
+    10px 13px 0 white, -10px 13px 0 white, 10px -13px 0 white,
+    -10px -13px 0 white, 13px 10px 0 white, -13px 10px 0 white,
+    13px -10px 0 white, -13px -10px 0 white, 11px 13px 0 white,
+    -11px 13px 0 white, 11px -13px 0 white, -11px -13px 0 white,
+    13px 11px 0 white, -13px 11px 0 white, 13px -11px 0 white,
+    -13px -11px 0 white, 12px 13px 0 white, -12px 13px 0 white,
+    12px -13px 0 white, -12px -13px 0 white, 13px 12px 0 white,
+    -13px 12px 0 white, 13px -12px 0 white, -13px -12px 0 white,
+    14px 14px 0 white, -14px 14px 0 white, 14px -14px 0 white,
+    -14px -14px 0 white, 13px 14px 0 white, -13px 14px 0 white,
+    13px -14px 0 white, -13px -14px 0 white, 14px 13px 0 white,
+    -14px 13px 0 white, 14px -13px 0 white, -14px -13px 0 white,
+    12px 14px 0 white, -12px 14px 0 white, 12px -14px 0 white,
+    -12px -14px 0 white, 14px 12px 0 white, -14px 12px 0 white,
+    14px -12px 0 white, -14px -12px 0 white, 11px 14px 0 white,
+    -11px 14px 0 white, 11px -14px 0 white, -11px -14px 0 white,
+    14px 11px 0 white, -14px 11px 0 white, 14px -11px 0 white,
+    -14px -11px 0 white, 10px 14px 0 white, -10px 14px 0 white,
+    10px -14px 0 white, -10px -14px 0 white, 14px 10px 0 white,
+    -14px 10px 0 white, 14px -10px 0 white, -14px -10px 0 white,
+    9px 14px 0 white, -9px 14px 0 white, 9px -14px 0 white, -9px -14px 0 white,
+    14px 9px 0 white, -14px 9px 0 white, 14px -9px 0 white, -14px -9px 0 white,
+    8px 14px 0 white, -8px 14px 0 white, 8px -14px 0 white, -8px -14px 0 white,
+    14px 8px 0 white, -14px 8px 0 white, 14px -8px 0 white, -14px -8px 0 white,
+    7px 14px 0 white, -7px 14px 0 white, 7px -14px 0 white, -7px -14px 0 white,
+    14px 7px 0 white, -14px 7px 0 white, 14px -7px 0 white, -14px -7px 0 white,
+    6px 14px 0 white, -6px 14px 0 white, 6px -14px 0 white, -6px -14px 0 white,
+    14px 6px 0 white, -14px 6px 0 white, 14px -6px 0 white, -14px -6px 0 white,
+    5px 14px 0 white, -5px 14px 0 white, 5px -14px 0 white, -5px -14px 0 white,
+    14px 5px 0 white, -14px 5px 0 white, 14px -5px 0 white, -14px -5px 0 white,
+    4px 14px 0 white, -4px 14px 0 white, 4px -14px 0 white, -4px -14px 0 white,
+    14px 4px 0 white, -14px 4px 0 white, 14px -4px 0 white, -14px -4px 0 white,
+    3px 14px 0 white, -3px 14px 0 white, 3px -14px 0 white, -3px -14px 0 white,
+    14px 3px 0 white, -14px 3px 0 white, 14px -3px 0 white, -14px -3px 0 white,
+    2px 14px 0 white, -2px 14px 0 white, 2px -14px 0 white, -2px -14px 0 white,
+    14px 2px 0 white, -14px 2px 0 white, 14px -2px 0 white, -14px -2px 0 white,
+    1px 14px 0 white, -1px 14px 0 white, 1px -14px 0 white, -1px -14px 0 white,
+    14px 1px 0 white, -14px 1px 0 white, 14px -1px 0 white, -14px -1px 0 white,
+    0px 14px 0 white, 0px -14px 0 white, -14px 0px 0 white, 14px 0px 0 white,
+    15px 15px 0 white, -15px 15px 0 white, 15px -15px 0 white,
+    -15px -15px 0 white, 14px 15px 0 white, -14px 15px 0 white,
+    14px -15px 0 white, -14px -15px 0 white, 15px 14px 0 white,
+    -15px 14px 0 white, 15px -14px 0 white, -15px -14px 0 white,
+    13px 15px 0 white, -13px 15px 0 white, 13px -15px 0 white,
+    -13px -15px 0 white, 15px 13px 0 white, -15px 13px 0 white,
+    15px -13px 0 white, -15px -13px 0 white, 12px 15px 0 white,
+    -12px 15px 0 white, 12px -15px 0 white, -12px -15px 0 white,
+    15px 12px 0 white, -15px 12px 0 white, 15px -12px 0 white,
+    -15px -12px 0 white, 11px 15px 0 white, -11px 15px 0 white,
+    11px -15px 0 white, -11px -15px 0 white, 15px 11px 0 white,
+    -15px 11px 0 white, 15px -11px 0 white, -15px -11px 0 white,
+    10px 15px 0 white, -10px 15px 0 white, 10px -15px 0 white,
+    -10px -15px 0 white, 15px 10px 0 white, -15px 10px 0 white,
+    15px -10px 0 white, -15px -10px 0 white, 9px 15px 0 white, -9px 15px 0 white,
+    9px -15px 0 white, -9px -15px 0 white, 15px 9px 0 white, -15px 9px 0 white,
+    15px -9px 0 white, -15px -9px 0 white, 8px 15px 0 white, -8px 15px 0 white,
+    8px -15px 0 white, -8px -15px 0 white, 15px 8px 0 white, -15px 8px 0 white,
+    15px -8px 0 white, -15px -8px 0 white, 7px 15px 0 white, -7px 15px 0 white,
+    7px -15px 0 white, -7px -15px 0 white, 15px 7px 0 white, -15px 7px 0 white,
+    15px -7px 0 white, -15px -7px 0 white, 6px 15px 0 white, -6px 15px 0 white,
+    6px -15px 0 white, -6px -15px 0 white, 15px 6px 0 white, -15px 6px 0 white,
+    15px -6px 0 white, -15px -6px 0 white, 5px 15px 0 white, -5px 15px 0 white,
+    5px -15px 0 white, -5px -15px 0 white, 15px 5px 0 white, -15px 5px 0 white,
+    15px -5px 0 white, -15px -5px 0 white, 4px 15px 0 white, -4px 15px 0 white,
+    4px -15px 0 white, -4px -15px 0 white, 15px 4px 0 white, -15px 4px 0 white,
+    15px -4px 0 white, -15px -4px 0 white, 3px 15px 0 white, -3px 15px 0 white,
+    3px -15px 0 white, -3px -15px 0 white, 15px 3px 0 white, -15px 3px 0 white,
+    15px -3px 0 white, -15px -3px 0 white, 2px 15px 0 white, -2px 15px 0 white,
+    2px -15px 0 white, -2px -15px 0 white, 15px 2px 0 white, -15px 2px 0 white,
+    15px -2px 0 white, -15px -2px 0 white, 1px 15px 0 white, -1px 15px 0 white,
+    1px -15px 0 white, -1px -15px 0 white, 15px 1px 0 white, -15px 1px 0 white,
+    15px -1px 0 white, -15px -1px 0 white, 0px 15px 0 white, 0px -15px 0 white,
+    -15px 0px 0 white, 15px 0px 0 white, 16px 16px 0 white, -16px 16px 0 white,
+    16px -16px 0 white, -16px -16px 0 white, 15px 16px 0 white,
+    -15px 16px 0 white, 15px -16px 0 white, -15px -16px 0 white,
+    16px 15px 0 white, -16px 15px 0 white, 16px -15px 0 white,
+    -16px -15px 0 white, 14px 16px 0 white, -14px 16px 0 white,
+    14px -16px 0 white, -14px -16px 0 white, 16px 14px 0 white,
+    -16px 14px 0 white, 16px -14px 0 white, -16px -14px 0 white,
+    13px 16px 0 white, -13px 16px 0 white, 13px -16px 0 white,
+    -13px -16px 0 white, 16px 13px 0 white, -16px 13px 0 white,
+    16px -13px 0 white, -16px -13px 0 white, 12px 16px 0 white,
+    -12px 16px 0 white, 12px -16px 0 white, -12px -16px 0 white,
+    16px 12px 0 white, -16px 12px 0 white, 16px -12px 0 white,
+    -16px -12px 0 white, 11px 16px 0 white, -11px 16px 0 white,
+    11px -16px 0 white, -11px -16px 0 white, 16px 11px 0 white,
+    -16px 11px 0 white, 16px -11px 0 white, -16px -11px 0 white,
+    10px 16px 0 white, -10px 16px 0 white, 10px -16px 0 white,
+    -10px -16px 0 white, 16px 10px 0 white, -16px 10px 0 white,
+    16px -10px 0 white, -16px -10px 0 white, 9px 16px 0 white, -9px 16px 0 white,
+    9px -16px 0 white, -9px -16px 0 white, 16px 9px 0 white, -16px 9px 0 white,
+    16px -9px 0 white, -16px -9px 0 white, 8px 16px 0 white, -8px 16px 0 white,
+    8px -16px 0 white, -8px -16px 0 white, 16px 8px 0 white, -16px 8px 0 white,
+    16px -8px 0 white, -16px -8px 0 white, 7px 16px 0 white, -7px 16px 0 white,
+    7px -16px 0 white, -7px -16px 0 white, 16px 7px 0 white, -16px 7px 0 white,
+    16px -7px 0 white, -16px -7px 0 white, 6px 16px 0 white, -6px 16px 0 white,
+    6px -16px 0 white, -6px -16px 0 white, 16px 6px 0 white, -16px 6px 0 white,
+    16px -6px 0 white, -16px -6px 0 white, 5px 16px 0 white, -5px 16px 0 white,
+    5px -16px 0 white, -5px -16px 0 white, 16px 5px 0 white, -16px 5px 0 white,
+    16px -5px 0 white, -16px -5px 0 white, 4px 16px 0 white, -4px 16px 0 white,
+    4px -16px 0 white, -4px -16px 0 white, 16px 4px 0 white, -16px 4px 0 white,
+    16px -4px 0 white, -16px -4px 0 white, 3px 16px 0 white, -3px 16px 0 white,
+    3px -16px 0 white, -3px -16px 0 white, 16px 3px 0 white, -16px 3px 0 white,
+    16px -3px 0 white, -16px -3px 0 white, 2px 16px 0 white, -2px 16px 0 white,
+    2px -16px 0 white, -2px -16px 0 white, 16px 2px 0 white, -16px 2px 0 white,
+    16px -2px 0 white, -16px -2px 0 white, 1px 16px 0 white, -1px 16px 0 white,
+    1px -16px 0 white, -1px -16px 0 white, 16px 1px 0 white, -16px 1px 0 white,
+    16px -1px 0 white, -16px -1px 0 white, 0px 16px 0 white, 0px -16px 0 white,
+    -16px 0px 0 white, 16px 0px 0 white, 17px 17px 0 white, -17px 17px 0 white,
+    17px -17px 0 white, -17px -17px 0 white, 16px 17px 0 white,
+    -16px 17px 0 white, 16px -17px 0 white, -16px -17px 0 white,
+    17px 16px 0 white, -17px 16px 0 white, 17px -16px 0 white,
+    -17px -16px 0 white, 15px 17px 0 white, -15px 17px 0 white,
+    15px -17px 0 white, -15px -17px 0 white, 17px 15px 0 white,
+    -17px 15px 0 white, 17px -15px 0 white, -17px -15px 0 white,
+    14px 17px 0 white, -14px 17px 0 white, 14px -17px 0 white,
+    -14px -17px 0 white, 17px 14px 0 white, -17px 14px 0 white,
+    17px -14px 0 white, -17px -14px 0 white, 13px 17px 0 white,
+    -13px 17px 0 white, 13px -17px 0 white, -13px -17px 0 white,
+    17px 13px 0 white, -17px 13px 0 white, 17px -13px 0 white,
+    -17px -13px 0 white, 12px 17px 0 white, -12px 17px 0 white,
+    12px -17px 0 white, -12px -17px 0 white, 17px 12px 0 white,
+    -17px 12px 0 white, 17px -12px 0 white, -17px -12px 0 white,
+    11px 17px 0 white, -11px 17px 0 white, 11px -17px 0 white,
+    -11px -17px 0 white, 17px 11px 0 white, -17px 11px 0 white,
+    17px -11px 0 white, -17px -11px 0 white, 10px 17px 0 white,
+    -10px 17px 0 white, 10px -17px 0 white, -10px -17px 0 white,
+    17px 10px 0 white, -17px 10px 0 white, 17px -10px 0 white,
+    -17px -10px 0 white, 9px 17px 0 white, -9px 17px 0 white, 9px -17px 0 white,
+    -9px -17px 0 white, 17px 9px 0 white, -17px 9px 0 white, 17px -9px 0 white,
+    -17px -9px 0 white, 8px 17px 0 white, -8px 17px 0 white, 8px -17px 0 white,
+    -8px -17px 0 white, 17px 8px 0 white, -17px 8px 0 white, 17px -8px 0 white,
+    -17px -8px 0 white, 7px 17px 0 white, -7px 17px 0 white, 7px -17px 0 white,
+    -7px -17px 0 white, 17px 7px 0 white, -17px 7px 0 white, 17px -7px 0 white,
+    -17px -7px 0 white, 6px 17px 0 white, -6px 17px 0 white, 6px -17px 0 white,
+    -6px -17px 0 white, 17px 6px 0 white, -17px 6px 0 white, 17px -6px 0 white,
+    -17px -6px 0 white, 5px 17px 0 white, -5px 17px 0 white, 5px -17px 0 white,
+    -5px -17px 0 white, 17px 5px 0 white, -17px 5px 0 white, 17px -5px 0 white,
+    -17px -5px 0 white, 4px 17px 0 white, -4px 17px 0 white, 4px -17px 0 white,
+    -4px -17px 0 white, 17px 4px 0 white, -17px 4px 0 white, 17px -4px 0 white,
+    -17px -4px 0 white, 3px 17px 0 white, -3px 17px 0 white, 3px -17px 0 white,
+    -3px -17px 0 white, 17px 3px 0 white, -17px 3px 0 white, 17px -3px 0 white,
+    -17px -3px 0 white, 2px 17px 0 white, -2px 17px 0 white, 2px -17px 0 white,
+    -2px -17px 0 white, 17px 2px 0 white, -17px 2px 0 white, 17px -2px 0 white,
+    -17px -2px 0 white, 1px 17px 0 white, -1px 17px 0 white, 1px -17px 0 white,
+    -1px -17px 0 white, 17px 1px 0 white, -17px 1px 0 white, 17px -1px 0 white,
+    -17px -1px 0 white, 0px 17px 0 white, 0px -17px 0 white, -17px 0px 0 white,
+    17px 0px 0 white, 18px 18px 0 white, -18px 18px 0 white, 18px -18px 0 white,
+    -18px -18px 0 white, 17px 18px 0 white, -17px 18px 0 white,
+    17px -18px 0 white, -17px -18px 0 white, 18px 17px 0 white,
+    -18px 17px 0 white, 18px -17px 0 white, -18px -17px 0 white,
+    16px 18px 0 white, -16px 18px 0 white, 16px -18px 0 white,
+    -16px -18px 0 white, 18px 16px 0 white, -18px 16px 0 white,
+    18px -16px 0 white, -18px -16px 0 white, 15px 18px 0 white,
+    -15px 18px 0 white, 15px -18px 0 white, -15px -18px 0 white,
+    18px 15px 0 white, -18px 15px 0 white, 18px -15px 0 white,
+    -18px -15px 0 white, 14px 18px 0 white, -14px 18px 0 white,
+    14px -18px 0 white, -14px -18px 0 white, 18px 14px 0 white,
+    -18px 14px 0 white, 18px -14px 0 white, -18px -14px 0 white,
+    13px 18px 0 white, -13px 18px 0 white, 13px -18px 0 white,
+    -13px -18px 0 white, 18px 13px 0 white, -18px 13px 0 white,
+    18px -13px 0 white, -18px -13px 0 white, 12px 18px 0 white,
+    -12px 18px 0 white, 12px -18px 0 white, -12px -18px 0 white,
+    18px 12px 0 white, -18px 12px 0 white, 18px -12px 0 white,
+    -18px -12px 0 white, 11px 18px 0 white, -11px 18px 0 white,
+    11px -18px 0 white, -11px -18px 0 white, 18px 11px 0 white,
+    -18px 11px 0 white, 18px -11px 0 white, -18px -11px 0 white,
+    10px 18px 0 white, -10px 18px 0 white, 10px -18px 0 white,
+    -10px -18px 0 white, 18px 10px 0 white, -18px 10px 0 white,
+    18px -10px 0 white, -18px -10px 0 white, 9px 18px 0 white, -9px 18px 0 white,
+    9px -18px 0 white, -9px -18px 0 white, 18px 9px 0 white, -18px 9px 0 white,
+    18px -9px 0 white, -18px -9px 0 white, 8px 18px 0 white, -8px 18px 0 white,
+    8px -18px 0 white, -8px -18px 0 white, 18px 8px 0 white, -18px 8px 0 white,
+    18px -8px 0 white, -18px -8px 0 white, 7px 18px 0 white, -7px 18px 0 white,
+    7px -18px 0 white, -7px -18px 0 white, 18px 7px 0 white, -18px 7px 0 white,
+    18px -7px 0 white, -18px -7px 0 white, 6px 18px 0 white, -6px 18px 0 white,
+    6px -18px 0 white, -6px -18px 0 white, 18px 6px 0 white, -18px 6px 0 white,
+    18px -6px 0 white, -18px -6px 0 white, 5px 18px 0 white, -5px 18px 0 white,
+    5px -18px 0 white, -5px -18px 0 white, 18px 5px 0 white, -18px 5px 0 white,
+    18px -5px 0 white, -18px -5px 0 white, 4px 18px 0 white, -4px 18px 0 white,
+    4px -18px 0 white, -4px -18px 0 white, 18px 4px 0 white, -18px 4px 0 white,
+    18px -4px 0 white, -18px -4px 0 white, 3px 18px 0 white, -3px 18px 0 white,
+    3px -18px 0 white, -3px -18px 0 white, 18px 3px 0 white, -18px 3px 0 white,
+    18px -3px 0 white, -18px -3px 0 white, 2px 18px 0 white, -2px 18px 0 white,
+    2px -18px 0 white, -2px -18px 0 white, 18px 2px 0 white, -18px 2px 0 white,
+    18px -2px 0 white, -18px -2px 0 white, 1px 18px 0 white, -1px 18px 0 white,
+    1px -18px 0 white, -1px -18px 0 white, 18px 1px 0 white, -18px 1px 0 white,
+    18px -1px 0 white, -18px -1px 0 white, 0px 18px 0 white, 0px -18px 0 white,
+    -18px 0px 0 white, 18px 0px 0 white, 19px 19px 0 white, -19px 19px 0 white,
+    19px -19px 0 white, -19px -19px 0 white, 18px 19px 0 white,
+    -18px 19px 0 white, 18px -19px 0 white, -18px -19px 0 white,
+    19px 18px 0 white, -19px 18px 0 white, 19px -18px 0 white,
+    -19px -18px 0 white, 17px 19px 0 white, -17px 19px 0 white,
+    17px -19px 0 white, -17px -19px 0 white, 19px 17px 0 white,
+    -19px 17px 0 white, 19px -17px 0 white, -19px -17px 0 white,
+    16px 19px 0 white, -16px 19px 0 white, 16px -19px 0 white,
+    -16px -19px 0 white, 19px 16px 0 white, -19px 16px 0 white,
+    19px -16px 0 white, -19px -16px 0 white, 15px 19px 0 white,
+    -15px 19px 0 white, 15px -19px 0 white, -15px -19px 0 white,
+    19px 15px 0 white, -19px 15px 0 white, 19px -15px 0 white,
+    -19px -15px 0 white, 14px 19px 0 white, -14px 19px 0 white,
+    14px -19px 0 white, -14px -19px 0 white, 19px 14px 0 white,
+    -19px 14px 0 white, 19px -14px 0 white, -19px -14px 0 white,
+    13px 19px 0 white, -13px 19px 0 white, 13px -19px 0 white,
+    -13px -19px 0 white, 19px 13px 0 white, -19px 13px 0 white,
+    19px -13px 0 white, -19px -13px 0 white, 12px 19px 0 white,
+    -12px 19px 0 white, 12px -19px 0 white, -12px -19px 0 white,
+    19px 12px 0 white, -19px 12px 0 white, 19px -12px 0 white,
+    -19px -12px 0 white, 11px 19px 0 white, -11px 19px 0 white,
+    11px -19px 0 white, -11px -19px 0 white, 19px 11px 0 white,
+    -19px 11px 0 white, 19px -11px 0 white, -19px -11px 0 white,
+    10px 19px 0 white, -10px 19px 0 white, 10px -19px 0 white,
+    -10px -19px 0 white, 19px 10px 0 white, -19px 10px 0 white,
+    19px -10px 0 white, -19px -10px 0 white, 9px 19px 0 white, -9px 19px 0 white,
+    9px -19px 0 white, -9px -19px 0 white, 19px 9px 0 white, -19px 9px 0 white,
+    19px -9px 0 white, -19px -9px 0 white, 8px 19px 0 white, -8px 19px 0 white,
+    8px -19px 0 white, -8px -19px 0 white, 19px 8px 0 white, -19px 8px 0 white,
+    19px -8px 0 white, -19px -8px 0 white, 7px 19px 0 white, -7px 19px 0 white,
+    7px -19px 0 white, -7px -19px 0 white, 19px 7px 0 white, -19px 7px 0 white,
+    19px -7px 0 white, -19px -7px 0 white, 6px 19px 0 white, -6px 19px 0 white,
+    6px -19px 0 white, -6px -19px 0 white, 19px 6px 0 white, -19px 6px 0 white,
+    19px -6px 0 white, -19px -6px 0 white, 5px 19px 0 white, -5px 19px 0 white,
+    5px -19px 0 white, -5px -19px 0 white, 19px 5px 0 white, -19px 5px 0 white,
+    19px -5px 0 white, -19px -5px 0 white, 4px 19px 0 white, -4px 19px 0 white,
+    4px -19px 0 white, -4px -19px 0 white, 19px 4px 0 white, -19px 4px 0 white,
+    19px -4px 0 white, -19px -4px 0 white, 3px 19px 0 white, -3px 19px 0 white,
+    3px -19px 0 white, -3px -19px 0 white, 19px 3px 0 white, -19px 3px 0 white,
+    19px -3px 0 white, -19px -3px 0 white, 2px 19px 0 white, -2px 19px 0 white,
+    2px -19px 0 white, -2px -19px 0 white, 19px 2px 0 white, -19px 2px 0 white,
+    19px -2px 0 white, -19px -2px 0 white, 1px 19px 0 white, -1px 19px 0 white,
+    1px -19px 0 white, -1px -19px 0 white, 19px 1px 0 white, -19px 1px 0 white,
+    19px -1px 0 white, -19px -1px 0 white, 0px 19px 0 white, 0px -19px 0 white,
+    -19px 0px 0 white, 19px 0px 0 white, 20px 20px 0 white, -20px 20px 0 white,
+    20px -20px 0 white, -20px -20px 0 white, 19px 20px 0 white,
+    -19px 20px 0 white, 19px -20px 0 white, -19px -20px 0 white,
+    20px 19px 0 white, -20px 19px 0 white, 20px -19px 0 white,
+    -20px -19px 0 white, 18px 20px 0 white, -18px 20px 0 white,
+    18px -20px 0 white, -18px -20px 0 white, 20px 18px 0 white,
+    -20px 18px 0 white, 20px -18px 0 white, -20px -18px 0 white,
+    17px 20px 0 white, -17px 20px 0 white, 17px -20px 0 white,
+    -17px -20px 0 white, 20px 17px 0 white, -20px 17px 0 white,
+    20px -17px 0 white, -20px -17px 0 white, 16px 20px 0 white,
+    -16px 20px 0 white, 16px -20px 0 white, -16px -20px 0 white,
+    20px 16px 0 white, -20px 16px 0 white, 20px -16px 0 white,
+    -20px -16px 0 white, 15px 20px 0 white, -15px 20px 0 white,
+    15px -20px 0 white, -15px -20px 0 white, 20px 15px 0 white,
+    -20px 15px 0 white, 20px -15px 0 white, -20px -15px 0 white,
+    14px 20px 0 white, -14px 20px 0 white, 14px -20px 0 white,
+    -14px -20px 0 white, 20px 14px 0 white, -20px 14px 0 white,
+    20px -14px 0 white, -20px -14px 0 white, 13px 20px 0 white,
+    -13px 20px 0 white, 13px -20px 0 white, -13px -20px 0 white,
+    20px 13px 0 white, -20px 13px 0 white, 20px -13px 0 white,
+    -20px -13px 0 white, 12px 20px 0 white, -12px 20px 0 white,
+    12px -20px 0 white, -12px -20px 0 white, 20px 12px 0 white,
+    -20px 12px 0 white, 20px -12px 0 white, -20px -12px 0 white,
+    11px 20px 0 white, -11px 20px 0 white, 11px -20px 0 white,
+    -11px -20px 0 white, 20px 11px 0 white, -20px 11px 0 white,
+    20px -11px 0 white, -20px -11px 0 white, 10px 20px 0 white,
+    -10px 20px 0 white, 10px -20px 0 white, -10px -20px 0 white,
+    20px 10px 0 white, -20px 10px 0 white, 20px -10px 0 white,
+    -20px -10px 0 white, 9px 20px 0 white, -9px 20px 0 white, 9px -20px 0 white,
+    -9px -20px 0 white, 20px 9px 0 white, -20px 9px 0 white, 20px -9px 0 white,
+    -20px -9px 0 white, 8px 20px 0 white, -8px 20px 0 white, 8px -20px 0 white,
+    -8px -20px 0 white, 20px 8px 0 white, -20px 8px 0 white, 20px -8px 0 white,
+    -20px -8px 0 white, 7px 20px 0 white, -7px 20px 0 white, 7px -20px 0 white,
+    -7px -20px 0 white, 20px 7px 0 white, -20px 7px 0 white, 20px -7px 0 white,
+    -20px -7px 0 white, 6px 20px 0 white, -6px 20px 0 white, 6px -20px 0 white,
+    -6px -20px 0 white, 20px 6px 0 white, -20px 6px 0 white, 20px -6px 0 white,
+    -20px -6px 0 white, 5px 20px 0 white, -5px 20px 0 white, 5px -20px 0 white,
+    -5px -20px 0 white, 20px 5px 0 white, -20px 5px 0 white, 20px -5px 0 white,
+    -20px -5px 0 white, 4px 20px 0 white, -4px 20px 0 white, 4px -20px 0 white,
+    -4px -20px 0 white, 20px 4px 0 white, -20px 4px 0 white, 20px -4px 0 white,
+    -20px -4px 0 white, 3px 20px 0 white, -3px 20px 0 white, 3px -20px 0 white,
+    -3px -20px 0 white, 20px 3px 0 white, -20px 3px 0 white, 20px -3px 0 white,
+    -20px -3px 0 white, 2px 20px 0 white, -2px 20px 0 white, 2px -20px 0 white,
+    -2px -20px 0 white, 20px 2px 0 white, -20px 2px 0 white, 20px -2px 0 white,
+    -20px -2px 0 white, 1px 20px 0 white, -1px 20px 0 white, 1px -20px 0 white,
+    -1px -20px 0 white, 20px 1px 0 white, -20px 1px 0 white, 20px -1px 0 white,
+    -20px -1px 0 white, 0px 20px 0 white, 0px -20px 0 white, -20px 0px 0 white,
+    20px 0px 0 white, 21px 21px 0 white, -21px 21px 0 white, 21px -21px 0 white,
+    -21px -21px 0 white, 20px 21px 0 white, -20px 21px 0 white,
+    20px -21px 0 white, -20px -21px 0 white, 21px 20px 0 white,
+    -21px 20px 0 white, 21px -20px 0 white, -21px -20px 0 white,
+    19px 21px 0 white, -19px 21px 0 white, 19px -21px 0 white,
+    -19px -21px 0 white, 21px 19px 0 white, -21px 19px 0 white,
+    21px -19px 0 white, -21px -19px 0 white, 18px 21px 0 white,
+    -18px 21px 0 white, 18px -21px 0 white, -18px -21px 0 white,
+    21px 18px 0 white, -21px 18px 0 white, 21px -18px 0 white,
+    -21px -18px 0 white, 17px 21px 0 white, -17px 21px 0 white,
+    17px -21px 0 white, -17px -21px 0 white, 21px 17px 0 white,
+    -21px 17px 0 white, 21px -17px 0 white, -21px -17px 0 white,
+    16px 21px 0 white, -16px 21px 0 white, 16px -21px 0 white,
+    -16px -21px 0 white, 21px 16px 0 white, -21px 16px 0 white,
+    21px -16px 0 white, -21px -16px 0 white, 15px 21px 0 white,
+    -15px 21px 0 white, 15px -21px 0 white, -15px -21px 0 white,
+    21px 15px 0 white, -21px 15px 0 white, 21px -15px 0 white,
+    -21px -15px 0 white, 14px 21px 0 white, -14px 21px 0 white,
+    14px -21px 0 white, -14px -21px 0 white, 21px 14px 0 white,
+    -21px 14px 0 white, 21px -14px 0 white, -21px -14px 0 white,
+    13px 21px 0 white, -13px 21px 0 white, 13px -21px 0 white,
+    -13px -21px 0 white, 21px 13px 0 white, -21px 13px 0 white,
+    21px -13px 0 white, -21px -13px 0 white, 12px 21px 0 white,
+    -12px 21px 0 white, 12px -21px 0 white, -12px -21px 0 white,
+    21px 12px 0 white, -21px 12px 0 white, 21px -12px 0 white,
+    -21px -12px 0 white, 11px 21px 0 white, -11px 21px 0 white,
+    11px -21px 0 white, -11px -21px 0 white, 21px 11px 0 white,
+    -21px 11px 0 white, 21px -11px 0 white, -21px -11px 0 white,
+    10px 21px 0 white, -10px 21px 0 white, 10px -21px 0 white,
+    -10px -21px 0 white, 21px 10px 0 white, -21px 10px 0 white,
+    21px -10px 0 white, -21px -10px 0 white, 9px 21px 0 white, -9px 21px 0 white,
+    9px -21px 0 white, -9px -21px 0 white, 21px 9px 0 white, -21px 9px 0 white,
+    21px -9px 0 white, -21px -9px 0 white, 8px 21px 0 white, -8px 21px 0 white,
+    8px -21px 0 white, -8px -21px 0 white, 21px 8px 0 white, -21px 8px 0 white,
+    21px -8px 0 white, -21px -8px 0 white, 7px 21px 0 white, -7px 21px 0 white,
+    7px -21px 0 white, -7px -21px 0 white, 21px 7px 0 white, -21px 7px 0 white,
+    21px -7px 0 white, -21px -7px 0 white, 6px 21px 0 white, -6px 21px 0 white,
+    6px -21px 0 white, -6px -21px 0 white, 21px 6px 0 white, -21px 6px 0 white,
+    21px -6px 0 white, -21px -6px 0 white, 5px 21px 0 white, -5px 21px 0 white,
+    5px -21px 0 white, -5px -21px 0 white, 21px 5px 0 white, -21px 5px 0 white,
+    21px -5px 0 white, -21px -5px 0 white, 4px 21px 0 white, -4px 21px 0 white,
+    4px -21px 0 white, -4px -21px 0 white, 21px 4px 0 white, -21px 4px 0 white,
+    21px -4px 0 white, -21px -4px 0 white, 3px 21px 0 white, -3px 21px 0 white,
+    3px -21px 0 white, -3px -21px 0 white, 21px 3px 0 white, -21px 3px 0 white,
+    21px -3px 0 white, -21px -3px 0 white, 2px 21px 0 white, -2px 21px 0 white,
+    2px -21px 0 white, -2px -21px 0 white, 21px 2px 0 white, -21px 2px 0 white,
+    21px -2px 0 white, -21px -2px 0 white, 1px 21px 0 white, -1px 21px 0 white,
+    1px -21px 0 white, -1px -21px 0 white, 21px 1px 0 white, -21px 1px 0 white,
+    21px -1px 0 white, -21px -1px 0 white, 0px 21px 0 white, 0px -21px 0 white,
+    -21px 0px 0 white, 21px 0px 0 white, 22px 22px 0 white, -22px 22px 0 white,
+    22px -22px 0 white, -22px -22px 0 white, 21px 22px 0 white,
+    -21px 22px 0 white, 21px -22px 0 white, -21px -22px 0 white,
+    22px 21px 0 white, -22px 21px 0 white, 22px -21px 0 white,
+    -22px -21px 0 white, 20px 22px 0 white, -20px 22px 0 white,
+    20px -22px 0 white, -20px -22px 0 white, 22px 20px 0 white,
+    -22px 20px 0 white, 22px -20px 0 white, -22px -20px 0 white,
+    19px 22px 0 white, -19px 22px 0 white, 19px -22px 0 white,
+    -19px -22px 0 white, 22px 19px 0 white, -22px 19px 0 white,
+    22px -19px 0 white, -22px -19px 0 white, 18px 22px 0 white,
+    -18px 22px 0 white, 18px -22px 0 white, -18px -22px 0 white,
+    22px 18px 0 white, -22px 18px 0 white, 22px -18px 0 white,
+    -22px -18px 0 white, 17px 22px 0 white, -17px 22px 0 white,
+    17px -22px 0 white, -17px -22px 0 white, 22px 17px 0 white,
+    -22px 17px 0 white, 22px -17px 0 white, -22px -17px 0 white,
+    16px 22px 0 white, -16px 22px 0 white, 16px -22px 0 white,
+    -16px -22px 0 white, 22px 16px 0 white, -22px 16px 0 white,
+    22px -16px 0 white, -22px -16px 0 white, 15px 22px 0 white,
+    -15px 22px 0 white, 15px -22px 0 white, -15px -22px 0 white,
+    22px 15px 0 white, -22px 15px 0 white, 22px -15px 0 white,
+    -22px -15px 0 white, 14px 22px 0 white, -14px 22px 0 white,
+    14px -22px 0 white, -14px -22px 0 white, 22px 14px 0 white,
+    -22px 14px 0 white, 22px -14px 0 white, -22px -14px 0 white,
+    13px 22px 0 white, -13px 22px 0 white, 13px -22px 0 white,
+    -13px -22px 0 white, 22px 13px 0 white, -22px 13px 0 white,
+    22px -13px 0 white, -22px -13px 0 white, 12px 22px 0 white,
+    -12px 22px 0 white, 12px -22px 0 white, -12px -22px 0 white,
+    22px 12px 0 white, -22px 12px 0 white, 22px -12px 0 white,
+    -22px -12px 0 white, 11px 22px 0 white, -11px 22px 0 white,
+    11px -22px 0 white, -11px -22px 0 white, 22px 11px 0 white,
+    -22px 11px 0 white, 22px -11px 0 white, -22px -11px 0 white,
+    10px 22px 0 white, -10px 22px 0 white, 10px -22px 0 white,
+    -10px -22px 0 white, 22px 10px 0 white, -22px 10px 0 white,
+    22px -10px 0 white, -22px -10px 0 white, 9px 22px 0 white, -9px 22px 0 white,
+    9px -22px 0 white, -9px -22px 0 white, 22px 9px 0 white, -22px 9px 0 white,
+    22px -9px 0 white, -22px -9px 0 white, 8px 22px 0 white, -8px 22px 0 white,
+    8px -22px 0 white, -8px -22px 0 white, 22px 8px 0 white, -22px 8px 0 white,
+    22px -8px 0 white, -22px -8px 0 white, 7px 22px 0 white, -7px 22px 0 white,
+    7px -22px 0 white, -7px -22px 0 white, 22px 7px 0 white, -22px 7px 0 white,
+    22px -7px 0 white, -22px -7px 0 white, 6px 22px 0 white, -6px 22px 0 white,
+    6px -22px 0 white, -6px -22px 0 white, 22px 6px 0 white, -22px 6px 0 white,
+    22px -6px 0 white, -22px -6px 0 white, 5px 22px 0 white, -5px 22px 0 white,
+    5px -22px 0 white, -5px -22px 0 white, 22px 5px 0 white, -22px 5px 0 white,
+    22px -5px 0 white, -22px -5px 0 white, 4px 22px 0 white, -4px 22px 0 white,
+    4px -22px 0 white, -4px -22px 0 white, 22px 4px 0 white, -22px 4px 0 white,
+    22px -4px 0 white, -22px -4px 0 white, 3px 22px 0 white, -3px 22px 0 white,
+    3px -22px 0 white, -3px -22px 0 white, 22px 3px 0 white, -22px 3px 0 white,
+    22px -3px 0 white, -22px -3px 0 white, 2px 22px 0 white, -2px 22px 0 white,
+    2px -22px 0 white, -2px -22px 0 white, 22px 2px 0 white, -22px 2px 0 white,
+    22px -2px 0 white, -22px -2px 0 white, 1px 22px 0 white, -1px 22px 0 white,
+    1px -22px 0 white, -1px -22px 0 white, 22px 1px 0 white, -22px 1px 0 white,
+    22px -1px 0 white, -22px -1px 0 white, 0px 22px 0 white, 0px -22px 0 white,
+    -22px 0px 0 white, 22px 0px 0 white, 23px 23px 0 white, -23px 23px 0 white,
+    23px -23px 0 white, -23px -23px 0 white, 22px 23px 0 white,
+    -22px 23px 0 white, 22px -23px 0 white, -22px -23px 0 white,
+    23px 22px 0 white, -23px 22px 0 white, 23px -22px 0 white,
+    -23px -22px 0 white, 21px 23px 0 white, -21px 23px 0 white,
+    21px -23px 0 white, -21px -23px 0 white, 23px 21px 0 white,
+    -23px 21px 0 white, 23px -21px 0 white, -23px -21px 0 white,
+    20px 23px 0 white, -20px 23px 0 white, 20px -23px 0 white,
+    -20px -23px 0 white, 23px 20px 0 white, -23px 20px 0 white,
+    23px -20px 0 white, -23px -20px 0 white, 19px 23px 0 white,
+    -19px 23px 0 white, 19px -23px 0 white, -19px -23px 0 white,
+    23px 19px 0 white, -23px 19px 0 white, 23px -19px 0 white,
+    -23px -19px 0 white, 18px 23px 0 white, -18px 23px 0 white,
+    18px -23px 0 white, -18px -23px 0 white, 23px 18px 0 white,
+    -23px 18px 0 white, 23px -18px 0 white, -23px -18px 0 white,
+    17px 23px 0 white, -17px 23px 0 white, 17px -23px 0 white,
+    -17px -23px 0 white, 23px 17px 0 white, -23px 17px 0 white,
+    23px -17px 0 white, -23px -17px 0 white, 16px 23px 0 white,
+    -16px 23px 0 white, 16px -23px 0 white, -16px -23px 0 white,
+    23px 16px 0 white, -23px 16px 0 white, 23px -16px 0 white,
+    -23px -16px 0 white, 15px 23px 0 white, -15px 23px 0 white,
+    15px -23px 0 white, -15px -23px 0 white, 23px 15px 0 white,
+    -23px 15px 0 white, 23px -15px 0 white, -23px -15px 0 white,
+    14px 23px 0 white, -14px 23px 0 white, 14px -23px 0 white,
+    -14px -23px 0 white, 23px 14px 0 white, -23px 14px 0 white,
+    23px -14px 0 white, -23px -14px 0 white, 13px 23px 0 white,
+    -13px 23px 0 white, 13px -23px 0 white, -13px -23px 0 white,
+    23px 13px 0 white, -23px 13px 0 white, 23px -13px 0 white,
+    -23px -13px 0 white, 12px 23px 0 white, -12px 23px 0 white,
+    12px -23px 0 white, -12px -23px 0 white, 23px 12px 0 white,
+    -23px 12px 0 white, 23px -12px 0 white, -23px -12px 0 white,
+    11px 23px 0 white, -11px 23px 0 white, 11px -23px 0 white,
+    -11px -23px 0 white, 23px 11px 0 white, -23px 11px 0 white,
+    23px -11px 0 white, -23px -11px 0 white, 10px 23px 0 white,
+    -10px 23px 0 white, 10px -23px 0 white, -10px -23px 0 white,
+    23px 10px 0 white, -23px 10px 0 white, 23px -10px 0 white,
+    -23px -10px 0 white, 9px 23px 0 white, -9px 23px 0 white, 9px -23px 0 white,
+    -9px -23px 0 white, 23px 9px 0 white, -23px 9px 0 white, 23px -9px 0 white,
+    -23px -9px 0 white, 8px 23px 0 white, -8px 23px 0 white, 8px -23px 0 white,
+    -8px -23px 0 white, 23px 8px 0 white, -23px 8px 0 white, 23px -8px 0 white,
+    -23px -8px 0 white, 7px 23px 0 white, -7px 23px 0 white, 7px -23px 0 white,
+    -7px -23px 0 white, 23px 7px 0 white, -23px 7px 0 white, 23px -7px 0 white,
+    -23px -7px 0 white, 6px 23px 0 white, -6px 23px 0 white, 6px -23px 0 white,
+    -6px -23px 0 white, 23px 6px 0 white, -23px 6px 0 white, 23px -6px 0 white,
+    -23px -6px 0 white, 5px 23px 0 white, -5px 23px 0 white, 5px -23px 0 white,
+    -5px -23px 0 white, 23px 5px 0 white, -23px 5px 0 white, 23px -5px 0 white,
+    -23px -5px 0 white, 4px 23px 0 white, -4px 23px 0 white, 4px -23px 0 white,
+    -4px -23px 0 white, 23px 4px 0 white, -23px 4px 0 white, 23px -4px 0 white,
+    -23px -4px 0 white, 3px 23px 0 white, -3px 23px 0 white, 3px -23px 0 white,
+    -3px -23px 0 white, 23px 3px 0 white, -23px 3px 0 white, 23px -3px 0 white,
+    -23px -3px 0 white, 2px 23px 0 white, -2px 23px 0 white, 2px -23px 0 white,
+    -2px -23px 0 white, 23px 2px 0 white, -23px 2px 0 white, 23px -2px 0 white,
+    -23px -2px 0 white, 1px 23px 0 white, -1px 23px 0 white, 1px -23px 0 white,
+    -1px -23px 0 white, 23px 1px 0 white, -23px 1px 0 white, 23px -1px 0 white,
+    -23px -1px 0 white, 0px 23px 0 white, 0px -23px 0 white, -23px 0px 0 white,
+    23px 0px 0 white;
+}
+.excuses {
+  position: relative;
+  top: -105px;
+  left: 145px;
   text-align: right;
+  font-size: 80px;
+  letter-spacing: 1.9rem;
+  background-color: white;
+  color: black;
+  width: 560px;
+  border-radius: 30px;
+  transform: rotate(-3deg);
+}
+.fill {
+  width: 60px;
+  height: 100px;
+  background-color: white;
+  position: relative;
+  bottom: 380px;
+  left: 530px;
 }
 </style>
